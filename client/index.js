@@ -9,7 +9,6 @@ const readCounter = () => {
       'Content-Type': 'application/json',
     },
   }).then(res => {
-    console.log('fetch success');
     return res.json();
   }).then(json => {
     document.getElementById('counter').textContent = json['Item']['num'];
