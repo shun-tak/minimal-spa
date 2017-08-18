@@ -26,6 +26,9 @@ const updateCounter = () => {
       'Content-Type': 'application/json',
     },
   }).then(res => {
+    let num = parseInt(document.getElementById('counter').textContent);
+    num++;
+    document.getElementById('counter').textContent = num;
   });
 };
 
@@ -38,5 +41,6 @@ const resetCounter = () => {
       'Content-Type': 'application/json',
     },
   }).then(res => {
+    document.getElementById('counter').textContent = 0;
   });
 };
